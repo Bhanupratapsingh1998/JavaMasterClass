@@ -1,0 +1,48 @@
+=> For core java topics
+
+Coupling
+Cohesion
+Association
+Aggregation
+Composition
+Singleton design pattern in Java 
+Private Constructor in Java 
+Why is the Java main method static? 
+Can we execute a program without main() method? 
+What is marker or tagged interface? 
+Difference between abstract class and interface 
+Advantage of Encapsulation in Java
+Object Cloning in Java 
+Why use clone() method ? 
+Why we need to use wrapper class instead of primitive data types?
+How to create Immutable class? 
+StringTokenizer in Java 
+Difference between Checked and Unchecked Exceptions 
+Difference between Comparable and Comparator 
+
+
+public class A {
+
+}
+
+public class B extends A {
+
+}
+
+public interface C {
+    A add();
+}
+
+public class D implements C {
+
+    @Override
+    public B add() { 
+        return null; // Valid, as B is a subclass of A (covariant return type).
+    }
+}
+
+
+Overriding Rules:
+
+In Java, when a class implements an interface or overrides a method, the method signature (method name, return type, and parameters) must exactly match or be covariant.
+A covariant return type means the return type of the overriding method can be a subclass of the return type of the overridden method.
