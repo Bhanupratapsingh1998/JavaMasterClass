@@ -16,6 +16,7 @@ public class IteratorExample {
             String fruit = iterator.next();
             if (fruit.equals("Banana")) {
                 iterator.remove(); // This is safe and does not cause ConcurrentModificationException
+                list.add("fruit");
             }
         }
 

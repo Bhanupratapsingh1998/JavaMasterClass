@@ -12,7 +12,8 @@ public class ForLoopExample {
 
         for (int i = 0; i < list.size(); i++) {
             if (list.get(i).equals("Banana")) {
-                list.remove(i); // This can cause ConcurrentModificationException
+                list.remove(i);
+                list.add("BANANA"); 
             }
         }
 
