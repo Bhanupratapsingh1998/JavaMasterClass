@@ -12,7 +12,7 @@ public class ThreadSafeArrayListExample {
         // Now the synchronizedList can be safely accessed by multiple threads
 
         // Create a thread-safe ArrayList
-        CopyOnWriteArrayList<String> threadSafeList = new CopyOnWriteArrayList<>();
+        List<String> threadSafeList = new CopyOnWriteArrayList<>();
         // Now the threadSafeList can be safely accessed by multiple threads
     }
 }
