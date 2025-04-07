@@ -3,6 +3,7 @@ package com.dsa2024.leetcode;
 import java.util.Arrays;
 
 public class MissingAndRepeatingNum {
+    /* Range should be 1 to n */
     public static int[] findMissingNumbers(int[] nums) {
         int[] result = new int[2];
         for (int i = 0; i < nums.length; i++) {
@@ -23,7 +24,7 @@ public class MissingAndRepeatingNum {
     }
 
     public static void main(String[] args) {
-        int[] nums = { 3, 1, 5, 6, 4 };
+        int[] nums = { 3, 1, 5, 6, 2, 3 };
         int[] missingNumbers = findMissingNumbers(nums);
         System.out.println(Arrays.toString(missingNumbers)); // Output: [3, 4]
     }
