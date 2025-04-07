@@ -1,4 +1,4 @@
-package com.dsa2024.may_24.day_04_05_24;
+package com.dsa2024.leetcode;
 
 import java.util.Arrays;
 

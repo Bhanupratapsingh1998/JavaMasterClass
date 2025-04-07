@@ -1,4 +1,4 @@
-package com.dsa2024.may_24.day_12_05_24;
+package com.dsa2024.leetcode;
 
 public class CheckSorted {
 
