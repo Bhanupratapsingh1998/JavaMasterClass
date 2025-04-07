@@ -41,7 +41,7 @@ public class LCSWithSubstring {
     }
 
     public static void main(String[] args) {
-        String text1 = "abcde";
+        String text1 = "abedec";
         String text2 = "ace";
 
         String lcs = findLCS(text1, text2);
