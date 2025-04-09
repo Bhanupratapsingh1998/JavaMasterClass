@@ -52,8 +52,8 @@ public class leftRotateArray {
 
     public static void main(String[] args) {
         int arr[] = { 1, 2, 3, 4, 5, 6, 7 };
-        int N = arr.length;
-        int d = 3;
-        rotateArr(arr, d, N);
+        int n = arr.length;
+        int d = 100;
+        rotateArr(arr, d, n);
     }
 }
