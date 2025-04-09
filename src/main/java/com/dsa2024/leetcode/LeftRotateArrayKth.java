@@ -2,7 +2,7 @@ package com.dsa2024.leetcode;
 
 import java.util.Arrays;
 
-public class leftRotateArray {
+public class LeftRotateArrayKth {
     /* Left Rotate the Array by One */
     static void rotateByOne(int arr[], int n) {
         int temp = arr[0];
@@ -53,7 +53,7 @@ public class leftRotateArray {
     public static void main(String[] args) {
         int arr[] = { 1, 2, 3, 4, 5, 6, 7 };
         int n = arr.length;
-        int d = 100;
+        int d = 3;
         rotateArr(arr, d, n);
     }
 }
