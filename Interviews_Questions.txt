@@ -3,3 +3,11 @@ https://www.edureka.co/blog/interview-questions/oops-interview-questions/
 
 For collection Frame Work
 https://www.edureka.co/blog/interview-questions/java-collections-interview-questions/
+
+
+1. Priority Queue.
+2. using 2 stack then make Queue
+3. lru cache 
+4. Two sum and three sum 
+5. Rain water 
+
