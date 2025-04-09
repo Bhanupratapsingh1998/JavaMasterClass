@@ -4,17 +4,31 @@ import java.util.Arrays;
 
 public class secondLargest {
     public static int findSecondLargestNum(int arr[]) {
-        int largest = arr[0];
-        int secondLargest = arr[1];
-        for (int i = 0; i < arr.length; i++) {
-            if (arr[i] > largest) {
+        if (arr == null || arr.length < 3) {
+            throw new IllegalArgumentException("Array must contain at least three elements");
+        }
+        int largest = Integer.MIN_VALUE;
+        int secondLargest = Integer.MIN_VALUE;
+        int thirdLargest = Integer.MIN_VALUE;
+    
+        for (int num : arr) {
+            if (num > largest) {
+                thirdLargest = secondLargest;
                 secondLargest = largest;
-                largest = arr[i];
-            } else if (arr[i] > secondLargest && largest != secondLargest) {
-                secondLargest = arr[i];
+                largest = num;
+            } else if (num > secondLargest && num < largest) {
+                thirdLargest = secondLargest;
+                secondLargest = num;
+            } else if (num > thirdLargest && num < secondLargest) {
+                thirdLargest = num;
             }
         }
-        return secondLargest;
+    
+        if (thirdLargest == Integer.MIN_VALUE) {
+            throw new RuntimeException("No distinct third largest number found");
+        }
+    
+        return thirdLargest;
     }
 
     // Using this in Stream API
@@ -29,9 +43,9 @@ public class secondLargest {
     }
 
     public static void main(String[] args) {
-        int arr[] = { 1, 2, 5, 4, 9, 11, 23 };
-        // int result = findSecondLargestNum(arr);
-        int result = findSecondLargestNumWithStream(arr);
+        int arr[] = { 1, 1,1};
+        int result = findSecondLargestNum(arr);
+        // int result = findSecondLargestNumWithStream(arr);
         System.out.println("The second largest number is : " + result);
     }
 }
