@@ -1,7 +1,7 @@
-package com.dsa2024.jan_24.day02_01_24;
+package com.dsa2024.leetcode;
 
 // https://www.geeksforgeeks.org/find-position-element-sorted-array-infinite-numbers/
-public class infiniteArray {
+public class infiniteArraySearch {
     public static void main(String[] args) {
         int[] arr = { 3, 5, 7, 9, 10, 90,
                 100, 130, 140, 160, 170 };
