@@ -1,4 +1,4 @@
-package com.dsa2024.jan_24.day01_01_24;
+package com.dsa2024.leetcode;
 
 import java.util.Arrays;
 import java.util.HashMap;
@@ -7,7 +7,7 @@ import java.util.Map;
 /**
  * twoSum
  */
-public class twoSum {
+public class TwoSum {
 
     public static void main(String[] args) {
         int nums[] = { 2, 3, 4 };
