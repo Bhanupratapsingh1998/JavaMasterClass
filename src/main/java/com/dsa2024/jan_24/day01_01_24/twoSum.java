@@ -12,9 +12,9 @@ public class twoSum {
     public static void main(String[] args) {
         int nums[] = { 2, 3, 4 };
         int target = 7;
-        // int results[] = getTwoSumFirst(nums, target);
+        int results[] = getTwoSumFirst(nums, target);
         // int results[] = getTwoSumSecond(nums, target);
-        int results[] = twoSumHashing(nums, target);
+        // int results[] = twoSumHashing(nums, target);
         System.out.println(Arrays.toString(results));
     }
 
@@ -29,6 +29,7 @@ public class twoSum {
         return new int[] { -1, -1 };
     }
 
+    /*Two pointer approach should be used in the sorted array*/
     private static int[] getTwoSumSecond(int[] nums, int target) {
         int i = 0;
         int j = nums.length - 1;
@@ -57,6 +58,6 @@ public class twoSum {
             }
             map.put(nums[i], i);
         }
-        throw new IllegalArgumentException("No two sum solution");
+        return new int[] { -1, -1 };    
     }
 }
