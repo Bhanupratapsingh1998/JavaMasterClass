@@ -1,6 +1,6 @@
 package com.dsa2024.leetcode;
 
-public class checkArraySorted {
+public class CheckArraySorted {
     public static boolean checkSorted(int arr[]) {
         boolean isSorted = true;
         for (int i = 0; i < arr.length - 1; i++) {

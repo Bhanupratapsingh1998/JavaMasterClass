@@ -1,6 +1,6 @@
 package com.dsa2024.leetcode;
 
-public class printAndPrintf {
+public class PrintAndPrintf {
     /*
      * %s: Inserts a string.
      * %d: Inserts a decimal (integer).

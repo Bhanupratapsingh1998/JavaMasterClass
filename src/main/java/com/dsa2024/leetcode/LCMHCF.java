@@ -1,6 +1,6 @@
 package com.dsa2024.leetcode;
 
-public class lcmhcf {
+public class LCMHCF {
     // HCF(Highest Common Factor also called GCD, Greatest Common Divisor)
     public static int hcf(int a, int b) {
         while (b != 0) {

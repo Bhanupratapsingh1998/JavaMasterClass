@@ -2,7 +2,7 @@ package com.dsa2024.leetcode;
 
 import java.util.Arrays;
 
-public class reverseArray {
+public class ReverseArray {
     public static int[] reversedArrayWhileLoop(int arr[]) {
         int n = arr.length;
         int start = 0;

@@ -2,7 +2,7 @@ package com.dsa2024.leetcode;
 
 import java.util.HashMap;
 
-public class validAnagram {
+public class ValidAnagram {
     public static boolean isValidAnagram(String s, String t) {
         HashMap<Character, Integer> map = new HashMap<>();
         for (int i = 0; i < s.length(); i++) {

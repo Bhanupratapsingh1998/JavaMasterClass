@@ -1,6 +1,6 @@
 package com.dsa2024.leetcode;
 
-public class findMissingNum {
+public class FindMissingNum {
     static int findMissingNumber(int[] arr, int N) {
         int expectedSum = N * (N + 1) / 2;
         int actualSum = 0;

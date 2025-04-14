@@ -2,7 +2,7 @@ package com.dsa2024.leetcode;
 
 import java.util.Arrays;
 
-public class secondLargest {
+public class SecondLargest {
     public static int findSecondLargestNum(int arr[]) {
         if (arr == null || arr.length < 3) {
             throw new IllegalArgumentException("Array must contain at least three elements");

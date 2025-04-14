@@ -2,7 +2,7 @@ package com.dsa2024.leetcode;
 
 import java.util.HashSet;
 
-public class removeDulpicateSorted {
+public class RemoveDulpicateSorted {
 
     /*
      * Brute Force
