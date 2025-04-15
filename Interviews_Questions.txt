@@ -10,4 +10,6 @@ https://www.edureka.co/blog/interview-questions/java-collections-interview-quest
 3. lru cache 
 4. Two sum and three sum 
 5. Rain water 
+6. Linked List(even and odd)
+7. List<String> -> frequency
 
