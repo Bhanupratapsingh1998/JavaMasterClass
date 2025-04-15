@@ -1,6 +1,7 @@
 package com.dsa2024.leetcode;
 
 import java.util.Arrays;
+import java.util.Comparator;
 
 public class SecondLargest {
     public static int findSecondLargestNum(int arr[]) {
@@ -36,6 +37,7 @@ public class SecondLargest {
         return Arrays.stream(arr)
                 .boxed() // Convert int to Integer
                 .distinct()
+                //.sorted(Comparator.reverseOrder())
                 .sorted((a, b) -> b - a) // Sort in descending order
                 .skip(1)
                 .findFirst()
