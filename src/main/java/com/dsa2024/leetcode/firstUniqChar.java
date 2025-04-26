@@ -43,7 +43,7 @@ public class firstUniqChar {
 
     public static void main(String[] args) {
         String str = "leetcode";
-        System.out.println(getFirstUniqChar(str));
+        // System.out.println(getFirstUniqChar(str));
         System.out.println(firstUniqChar("leetcode")); // Output: 0
         System.out.println(firstUniqChar("loveleetcode")); // Output: 2
         System.out.println(firstUniqChar("aabb")); // Output: -1
