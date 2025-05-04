@@ -4,7 +4,7 @@ public class SearchInMountain {
 
     public static void main(String[] args) {
         int nums[] = { 1, 2, 3, 4, 5, 3, 1 };
-        int target = 3;
+        int target = 2;
         int results = search(nums, target);
         System.out.println(results);
     }
