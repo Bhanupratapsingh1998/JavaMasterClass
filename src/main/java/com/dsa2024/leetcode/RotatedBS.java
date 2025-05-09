@@ -1,4 +1,4 @@
-package com.dsa2024.jan_24.day12_01_24;
+package com.dsa2024.leetcode;
 
 public class RotatedBS {
     public static void main(String[] args) {
@@ -46,14 +46,17 @@ public class RotatedBS {
         int end = arr.length - 1;
         while (start <= end) {
             int mid = start + (end - start) / 2;
-            // 4 cases over here
+
+            // Check if mid is the pivot
             if (mid < end && arr[mid] > arr[mid + 1]) {
                 return mid;
             }
             if (mid > start && arr[mid] < arr[mid - 1]) {
                 return mid - 1;
             }
-            if (arr[mid] <= arr[start]) {
+
+            // Adjust search space based on the sorted side
+            if (arr[start] >= arr[mid]) {
                 end = mid - 1;
             } else {
                 start = mid + 1;

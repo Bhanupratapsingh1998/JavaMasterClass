@@ -1,4 +1,4 @@
-package com.dsa2024.jan_24.day11_01_24;
+package com.dsa2024.leetcode;
 
 public class SearchInMountain {
 
