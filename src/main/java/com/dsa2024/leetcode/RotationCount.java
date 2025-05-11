@@ -1,8 +1,8 @@
-package com.dsa2024.jan_24.day15_01_24;
+package com.dsa2024.leetcode;
 
 public class RotationCount {
     public static void main(String[] args) {
-        int[] arr = { 5, 6, 7, 1, 2, 3, 4 };
+        int[] arr = { 4, 5, 6, 7, 1, 2, 3 };
         System.out.println(search(arr));
         // System.out.println(findPivotWithDuplicates(arr));
     }
