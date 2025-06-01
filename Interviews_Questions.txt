@@ -13,3 +13,66 @@ https://www.edureka.co/blog/interview-questions/java-collections-interview-quest
 6. Linked List(even and odd)
 7. List<String> -> frequency
 
+
+**DSA Practice Order (Progressive Difficulty)**
+
+---
+
+### 🧱 Level 1: Basics & Foundations
+
+Start here if you're revising fundamentals or building your problem-solving speed.
+
+1. Length of Last Word
+2. Largest Element in an Array
+3. Find the smallest and second smallest element in an array
+4. Check if array is sorted or not
+5. Find valid anagram
+6. First Unique Character in a String
+7. Convert String to an Integer (myAtoi)
+
+---
+
+### 🔁 Level 2: Array Manipulation & Rotations
+
+Build confidence in traversals, rotations, and simple in-place edits.
+
+8. Remove Duplicates in-place from Sorted Array
+9. Left Rotate the Array by One and Kth
+10. Rotation Count
+11. Row Column Matrix
+
+---
+
+### 🔍 Level 3: Search & Binary Search Variants
+
+Practice variations of binary search – a key DSA pattern.
+
+12. Ceiling of a Number
+13. Find Smallest Letter Greater Than Target
+14. First and Last Position in Sorted Array
+15. Position of an Element in Infinite Sorted Array
+16. Search in Rotated Sorted Array
+17. Search in Rotated Sorted Array II
+
+---
+
+### ⛰️ Level 4: Bit More Challenging Search & Peak Logic
+
+Involves modified binary searches and peak analysis.
+
+18. Peak Index in Mountain Array
+19. Find in Mountain Array
+
+---
+
+### 🧩 Level 5: Classic Problems & Puzzles
+
+These are commonly asked and involve logic + array/string manipulations.
+
+20. Two Sum
+21. Three Sum
+22. Find the missing number \[1 to N]
+23. Find the Repeating and Missing Number from an Array
+24. Majority Element (\[n/3] times)
+25. Best Time to Buy or Sell Stocks
+
