@@ -1,7 +1,6 @@
-package com.dsa2024.leetcode;
+package com.dsa2024.leetcode.basics_foundations;
 
 import java.util.Arrays;
-import java.util.Comparator;
 
 public class SecondLargest {
     public static int findSecondLargestNum(int arr[]) {
@@ -11,7 +10,7 @@ public class SecondLargest {
         int largest = Integer.MIN_VALUE;
         int secondLargest = Integer.MIN_VALUE;
         int thirdLargest = Integer.MIN_VALUE;
-    
+
         for (int num : arr) {
             if (num > largest) {
                 thirdLargest = secondLargest;
@@ -24,12 +23,12 @@ public class SecondLargest {
                 thirdLargest = num;
             }
         }
-    
+
         if (thirdLargest == Integer.MIN_VALUE) {
             throw new RuntimeException("No distinct third largest number found");
         }
-    
-        return thirdLargest;
+
+        return largest;
     }
 
     // Using this in Stream API
@@ -37,7 +36,7 @@ public class SecondLargest {
         return Arrays.stream(arr)
                 .boxed() // Convert int to Integer
                 .distinct()
-                //.sorted(Comparator.reverseOrder())
+                // .sorted(Comparator.reverseOrder())
                 .sorted((a, b) -> b - a) // Sort in descending order
                 .skip(1)
                 .findFirst()
@@ -45,7 +44,7 @@ public class SecondLargest {
     }
 
     public static void main(String[] args) {
-        int arr[] = { 1, 1,1};
+        int arr[] = { 1, 3, 2 };
         int result = findSecondLargestNum(arr);
         // int result = findSecondLargestNumWithStream(arr);
         System.out.println("The second largest number is : " + result);
