@@ -1,4 +1,4 @@
-package com.dsa2024.leetcode;
+package com.dsa2024.leetcode.basics_foundations;
 
 public class CheckArraySorted {
     public static boolean checkSorted(int arr[]) {

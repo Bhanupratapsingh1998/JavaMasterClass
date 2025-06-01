@@ -24,11 +24,10 @@ public class SecondLargest {
             }
         }
 
-        if (thirdLargest == Integer.MIN_VALUE) {
-            throw new RuntimeException("No distinct third largest number found");
+        if (secondLargest == Integer.MIN_VALUE) {
+            return -1;
         }
-
-        return largest;
+        return secondLargest;
     }
 
     // Using this in Stream API
