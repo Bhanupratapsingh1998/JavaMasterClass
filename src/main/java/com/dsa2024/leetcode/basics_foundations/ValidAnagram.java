@@ -1,9 +1,18 @@
-package com.dsa2024.leetcode;
+package com.dsa2024.leetcode.basics_foundations;
 
 import java.util.HashMap;
 
 public class ValidAnagram {
+    /**
+     * Time Complexity: O(n), where n is the length of the strings.
+     * Space Complexity: O(1), since we are using a fixed-size map for character
+     * counts.
+     */
     public static boolean isValidAnagram(String s, String t) {
+        if (s.length() != t.length()) {
+            return false;
+        }
+
         HashMap<Character, Integer> map = new HashMap<>();
         for (int i = 0; i < s.length(); i++) {
             char ch = s.charAt(i);
