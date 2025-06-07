@@ -46,3 +46,152 @@ Overriding Rules:
 
 In Java, when a class implements an interface or overrides a method, the method signature (method name, return type, and parameters) must exactly match or be covariant.
 A covariant return type means the return type of the overriding method can be a subclass of the return type of the overridden method.
+
+
+===========================================================================English Material==============================================================================
+**English Language Preparation Plan for Java Developer (Experience: 3.6 Years, CTC: ₹5.5 LPA, Target: ₹12 LPA)**
+
+---
+
+**🌟 Goal: English for Tech Career Growth**
+
+* **Target:** Reach “Intermediate-Upper Intermediate” level in 4 months
+* **Focus Areas:**
+
+  * Spoken fluency (interviews, meetings)
+  * Listening (clients, team leads)
+  * Writing (emails, resume, LinkedIn)
+  * Reading (documents, tickets, tech blogs)
+
+---
+
+## 🗓️ Month-by-Month Plan
+
+### ✅ Month 1: Build Foundation (Grammar + Vocabulary + Listening)
+
+**Time needed:** 2-3 hrs/day
+
+1. **Grammar & Basic Speaking**
+
+   * Study from "English for Everyone" book or use BBC Learning English (Basic Grammar)
+   * YouTube Channels: "Speak English with Mr. Steve", "English Addict with Mr. Duncan"
+
+2. **Vocabulary**
+
+   * Learn 10 new tech & general words daily (use Anki flashcards)
+   * Focus: Work verbs, adjectives used in tech interviews
+
+3. **Listening Practice**
+
+   * Watch 1 TED Talk or Tech Talk daily (with subtitles)
+   * Useful Series: "How to Speak So People Want to Listen", BBC Business English
+
+4. **Speaking Practice**
+
+   * Use Google Voice Typing or HelloTalk app
+   * Speak 5–10 minutes daily about your work or day
+
+---
+
+### ✅ Month 2: Improve Speaking & Listening for Interviews
+
+1. **Shadowing Practice (Repeat after speakers)**
+
+   * Use short YouTube/TED videos (2–5 mins)
+   * Mimic tone, speed, and pauses
+
+2. **Interview English Practice**
+
+   * Practice answering:
+
+     * Tell me about yourself
+     * Strengths & weaknesses
+     * Describe your project
+     * How do you handle bugs?
+
+3. **Daily Routine (2–3 hrs)**
+
+   * 30 min: Interview speaking
+   * 30 min: Shadowing
+   * 30 min: Listening (tech podcast/YouTube)
+   * 30 min: Vocabulary
+   * 30 min: Grammar/Writing
+
+---
+
+### ✅ Month 3: Real-World Speaking + Resume & Email Writing
+
+1. **Real-world Speaking**
+
+   * Record yourself speaking:
+
+     * My experience in Java
+     * My favorite project
+     * How I solved a production bug
+
+2. **Resume Polishing**
+
+   * Learn professional writing style
+   * Improve resume in English (ask for review if needed)
+
+3. **English Email Templates**
+
+   * Learn to write short, clear emails:
+
+     * Request for meeting
+     * Bug fix explanation
+     * Code handover notes
+
+4. **Practice Mock Interviews**
+
+   * With a friend, mentor, or via AI
+
+---
+
+### ✅ Month 4: Master Fluency & Job Prep
+
+1. **Full Mock Interviews**
+
+   * Practice 3-4 mock interviews/week (HR + Technical)
+
+2. **LinkedIn Profile Update**
+
+   * Write in English with keywords: "Java Developer", "Spring Boot", "Microservices"
+
+3. **Apply to MNCs / Product Companies**
+
+   * Target: Accenture, Infosys, TCS Digital, Zoho, Razorpay, etc.
+
+4. **Group Practice**
+
+   * Join English Speaking Club (Telegram, WhatsApp, or local Meetup)
+
+---
+
+## 📘 Daily Sample Plan (2.5–3 hrs)
+
+| Time    | Task                            |
+| ------- | ------------------------------- |
+| 30 mins | Grammar/Vocabulary with Anki    |
+| 30 mins | Watch + Shadow English video    |
+| 30 mins | Practice answering interview Qs |
+| 30 mins | Resume writing / email writing  |
+| 30 mins | Speaking practice (record/talk) |
+
+---
+
+## 📱 Recommended Apps & Tools
+
+* **Anki / Quizlet** – Vocabulary
+* **YouTube** – TED Talks, BBC Learning English
+* **HelloTalk / Cambly / Speakify** – Speaking practice
+* **Grammarly** – Writing support
+* **Speechling** – Pronunciation training
+
+---
+
+## 👍 Next Steps (Optional)
+
+* Ask for a **daily planner checklist**
+* Request **sample interview answers in English**
+* Get help reviewing/updating **resume or LinkedIn** in English

@@ -1,4 +1,4 @@
-package com.dsa2024.leetcode;
+package com.dsa2024.leetcode.array_manipulations;
 
 import java.util.Arrays;
 
@@ -55,5 +55,6 @@ public class LeftRotateArrayKth {
         int n = arr.length;
         int d = 3;
         rotateArr(arr, d, n);
+        rotateByOne(arr, n);
     }
 }
