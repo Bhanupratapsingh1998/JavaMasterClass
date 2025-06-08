@@ -1,8 +1,8 @@
-package com.dsa2024.leetcode;
+package com.dsa2024.leetcode.array_manipulations;
 
 public class RotationCount {
     public static void main(String[] args) {
-        int[] arr = { 4, 5, 6, 7, 1, 2, 3 };
+        int[] arr = { 4, 5, 6, 7, 1, 2 };
         System.out.println(search(arr));
         // System.out.println(findPivotWithDuplicates(arr));
     }
