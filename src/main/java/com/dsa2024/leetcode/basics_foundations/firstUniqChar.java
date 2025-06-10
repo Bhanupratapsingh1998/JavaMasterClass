@@ -1,6 +1,6 @@
 package com.dsa2024.leetcode.basics_foundations;
 
-public class firstUniqChar {
+public class FirstUniqChar {
     // Brute Force Approach
     // Time Complexity: O(n^2)
     // Space Complexity: O(1)
