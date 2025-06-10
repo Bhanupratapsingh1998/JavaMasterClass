@@ -39,14 +39,13 @@ Build confidence in traversals, rotations, and simple in-place edits.
 8. Remove Duplicates in-place from Sorted Array
 9. Left Rotate the Array by One and Kth
 10. Rotation Count
-11. Row Column Matrix
 
 ---
 
 ### 🔍 Level 3: Search & Binary Search Variants
 
 Practice variations of binary search – a key DSA pattern.
-
+11. Row Column Matrix
 12. Ceiling of a Number
 13. Find Smallest Letter Greater Than Target
 14. First and Last Position in Sorted Array

@@ -1,4 +1,4 @@
-package com.dsa2024.leetcode;
+package com.dsa2024.leetcode.search_binary_search;
 
 import java.util.Arrays;
 

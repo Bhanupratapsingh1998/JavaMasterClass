@@ -1,4 +1,4 @@
-package com.dsa2024.leetcode;
+package com.dsa2024.leetcode.search_binary_search;
 
 public class Ceiling {
 
@@ -34,7 +34,7 @@ public class Ceiling {
 
     public static void main(String[] args) {
         int[] arr = { 2, 3, 5, 9, 14, 16, 18 };
-        int target = 15;
+        int target = 13;
         int ans = ceiling(arr, target);
         System.out.println(ans);
     }
