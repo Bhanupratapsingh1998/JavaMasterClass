@@ -1,4 +1,4 @@
-package com.dsa2024.leetcode;
+package com.dsa2024.leetcode.search_binary_search;
 
 public class SmallestLetter {
     // Given a characters array letters that is sorted in non-decreasing order and a
