@@ -1,4 +1,4 @@
-package com.dsa2024.leetcode;
+package com.dsa2024.leetcode.blind_75_QA;
 
 import java.util.Arrays;
 import java.util.HashMap;
