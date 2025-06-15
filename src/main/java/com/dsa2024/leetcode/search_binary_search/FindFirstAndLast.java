@@ -1,4 +1,4 @@
-package com.dsa2024.leetcode;
+package com.dsa2024.leetcode.search_binary_search;
 
 import java.util.Arrays;
 
@@ -71,8 +71,8 @@ public class FindFirstAndLast {
     public static void main(String[] args) {
         int nums[] = { 5, 7, 7, 8, 8, 10 };
         int target = 8;
-        // int results[] = searchRange(nums, target);
-        int results[] = searchRangeTwoPointer(nums, target);
+        int results[] = searchRange(nums, target);
+        // int results[] = searchRangeTwoPointer(nums, target);
         System.out.println(Arrays.toString(results));
     }
 }
