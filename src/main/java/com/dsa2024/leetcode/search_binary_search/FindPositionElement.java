@@ -1,7 +1,7 @@
-package com.dsa2024.leetcode;
+package com.dsa2024.leetcode.search_binary_search;
 
 // https://www.geeksforgeeks.org/find-position-element-sorted-array-infinite-numbers/
-public class InfiniteArraySearch {
+public class FindPositionElement {
     public static void main(String[] args) {
         int[] arr = { 3, 5, 7, 9, 10, 90,
                 100, 130, 140, 160, 170 };

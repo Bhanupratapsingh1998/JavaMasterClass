@@ -1,4 +1,4 @@
-package com.dsa2024.leetcode.LinkedList;
+package com.dsa2024.leetcode.linkedList;
 
 public class Node {
     public int data;
