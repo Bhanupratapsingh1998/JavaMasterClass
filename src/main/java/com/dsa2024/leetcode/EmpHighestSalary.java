@@ -4,6 +4,7 @@ import java.util.ArrayList;
 import java.util.Collections;
 import java.util.Comparator;
 import java.util.List;
+import java.util.Optional;
 import java.util.stream.Collectors;
 
 public class EmpHighestSalary {
@@ -19,6 +20,8 @@ public class EmpHighestSalary {
         employees.add(new Employee("Bhanu", 64000));
 
         List<Employee> secondHighest = fetchSecondHighestSalary(employees);
+        List<Employee> secondHighestWithDup = fetchSecondHighestSalaryWithDup(employees);
+
         System.out.println("Second Highest");
         secondHighest.forEach(e -> System.out.println(e.getName()+" : "+e.getSalary()));
         List<Employee> fList = filterNames(employees);
@@ -40,6 +43,27 @@ public class EmpHighestSalary {
                         .collect(Collectors.toList()))
                 .orElse(Collections.emptyList());
     }
+    private static List<Employee> fetchSecondHighestSalaryWithDup(List<Employee> employees) {
+        // Step 1: find the second highest distinct salary
+        Optional<Double> secondHighestSalary = employees.stream()
+                .map(Employee::getSalary)
+                .distinct()
+                .sorted(Comparator.reverseOrder())
+                .skip(1)
+                .findFirst();
+    
+        if (secondHighestSalary.isEmpty()) {
+            return Collections.emptyList();
+        }
+    
+        double target = secondHighestSalary.get();
+    
+        // Step 2: return all employees who have that salary
+        return employees.stream()
+                .filter(e -> Double.compare(e.getSalary(), target) == 0)
+                .collect(Collectors.toList());
+    }
+    
     private static List<Employee> filterNames(List<Employee> employees) {
         return employees.stream()
         .filter(e-> e.getName().startsWith("P") && e.getName().endsWith("n")).toList();
