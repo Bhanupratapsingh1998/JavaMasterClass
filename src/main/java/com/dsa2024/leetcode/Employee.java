@@ -18,4 +18,17 @@ public class Employee {
     public double getSalary() {
         return salary;
     }
+     // equals/hashCode only on salary
+     @Override
+     public boolean equals(Object o) {
+         if (this == o) return true;
+         if (!(o instanceof Employee)) return false;
+         Employee other = (Employee) o;
+         return Double.compare(salary, other.salary) == 0;
+     }
+ 
+     @Override
+     public int hashCode() {
+         return Double.hashCode(salary);
+     }
 }
