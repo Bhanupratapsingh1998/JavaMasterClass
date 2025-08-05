@@ -1,6 +1,9 @@
 package com.dsa2024.javaqa.solid;
 
 // LSP Compliant Code
+/*Objects of a superclass should be replaceable with objects of its subclasses without altering the correctness of the program.
+ * If S is a subclass of T, then we should be able to replace T with S without breaking functionality.
+*/
 abstract class Shape3 {
     public abstract int getArea();
 }
@@ -32,10 +35,6 @@ class Square3 extends Shape3 {
     private int side;
 
     public Square3(int side) {
-        this.side = side;
-    }
-
-    public void setSide(int side) {
         this.side = side;
     }
 
