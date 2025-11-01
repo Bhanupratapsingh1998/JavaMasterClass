@@ -1,0 +1,753 @@
+package interview;
+
+import java.io.CharConversionException;
+import java.util.HashSet;
+
+public class JavaProgram {
+	public static void main(String[] args)  {
+		/*
+		 * Write an Application to find the unique characters within a given string. You
+		 * will also need to find the total count of the unique characters found.
+		 * Example: Input: “AAAABBBBBVVVVVDDDDDSAAAA” Output: A B V D S, 5
+		 */
+		
+		UniqueCharctersFound uniqueCount = new UniqueCharctersFound();
+		Integer uniqueCharCount = uniqueCount.uniqueCharCount("AAAABBBBBVVVVVDDDDDSAAAA");
+		
+		System.out.print(uniqueCharCount);
+	
+	}
+}
+
+class UniqueCharctersFound{
+	 
+	public Integer uniqueCharCount(String str) {
+		
+		char[] charArray = str.toCharArray();
+		
+		HashSet<Character> set = new HashSet<>();
+		
+		for(int index = 0 ; index < charArray.length; index++ ) {
+			set.add(charArray[index]);
+		}
+		
+
+		long count = set.stream().count();
+	
+		return (int) count;
+	}
+	
+}
+
+
+
+/////////////////////////////////////////////////////////////////////////////////
+
+
+
+
+Create an immutable class
+ 
+ 
+  final class ImmutableClass{
+           private Integer id;
+		   private String name;
+		   private final List<String> friendList;
+		   
+		   ImmutableClass(Integer id, String name,){
+		          this.id = id ;
+				  this.name = name;
+
+		   }
+		   
+		   public getId(){
+		      return this.id;
+		   }
+		   
+		   public getName(){
+		      return this.name;
+		   }
+  
+  }
+  
+  obj.getFriendList();
+  friendList.add("Narendra");
+  
+ 
+  
+  Write a Java 8 stream pipeline to group employees by department and find the highest salary in each department.
+  
+  
+  HasMap<String,List<Optional<Employee>> employee =employees.stream().collect(Collectors.grouppingBy(Employee::getDepartment(),
+           Collectors.collectingAndThen(Collectors.List(),employees.stream().collect(Collectors.ComparingDouble(Employee::getSalary()).reversed()
+		   .findFrist()
+		   ));
+		   
+
+arr = {4,5,1,2,3} ele = 2; search for index of ele else return -1
+
+int ele =2;
+int result = -1;
+for(int i=0; i <arr.length ;i++){
+  if(arr[i] == ele){
+      result = i;
+  }
+}
+System.out.print(result);
+
+
+
+
+
+
+/////////////////////////////////////////////////////////////////////////////////
+
+
+
+
+
+
+List<String> listStr = List.of("Jhon","Sam","Jhon");
+
+HashMap<String,Integer>  map = listStr.stream().collect(Collectors.grouppingBy(str -> str,Collectors.counting());
+
+list.stream().map(str -> 
+
+
+String input = "Swiss";
+
+input.chars().mapOfObj(ch -> (char) ch).collect(Collectors.grouppingBy(
+
+
+select * from employee
+order by salary desc
+limit 1 offset 2
+
+select * from employee emp
+inner join employee maganger on emp.magangerid = maganger.id
+where emp.salary > maganger.salary
+
+
+
+////////////////////////////////////////////////////////////////////////
+
+
+
+
+
+
+
+    String str = "Narendra";
+	
+	StringBuilder strBuild = new StringBuilder(str);
+	
+	String reverseString  = strBuild.reverse();
+	
+	String uniqueString = str.chars().mapOfObj(ch -> String.valueOf((char) ch)).distinct().collect(Collectors.joining(""));
+	
+	Thread thread = new Thread(() -> {
+	   System.out.println("Runnble Thread ");
+	});
+	
+	thread.strat();
+	
+	
+	
+	
+	/////////////////////////////////////////////////////////
+	
+	
+	
+	
+input startdate  endatedate 
+
+how many wedendsy fall between these date
+
+create procdure getBetweenDays(In datetime startdate, In datetime endatedate)
+Begin 
+
+create temprary daysable(days varchar(100),date datetime);
+
+insert monthtable into(days,date) values ('Sunday,'01-01-2025');
+
+select days from daysable
+where date between startdate and endatedate
+and days = 'Wedenesday';
+
+ 
+select day(date) * from (select 1) 
+where date between startdate and endatedate
+and  date(date) = 'Wedenesday';
+
+end;
+
+
+At the time of my joining, I had clearly informed Ankit Sir that I was already carrying a heavy EMI burden and could not afford any delay in salary. He had assured me that, at most, there might be a delay of 15 days, but no more. However, the delay has now stretched to over three months
+
+
+
+
+////////////////////////////////////////////////////////////////////////////
+
+
+
+
+
+
+You are given three tables: Employees, Projects, and TimeLogs.
+ 
+Employees(employee_id, name, department)
+
+Projects(project_id, project_name, start_date, end_date)
+
+TimeLogs(log_id, employee_id, project_id, log_date, hours_logged)
+
+Write a SQL query to find the top 3 employees (by total hours logged) 
+who have worked on at least 2 different projects in the last 90 days.
+Also include the number of distinct projects and total hours logged for each.
+
+
+select Distict Projects.name,time.hours_logged ,emp.employee_id from employees 
+inner join 
+(select emp.employee_id from TimeLogs tls
+inner join Employees emp on emp.employee_id = tls.employee_id
+inner join Projects on Projects.project_id = tls.project_id
+group by emp.employee_id
+order by sum(hours_logged) desc
+limit 3) as top_logged_user on top_logged_user.employee_id = employees.employee_id
+inner join Projects on Projects.project_id = tls.project_id
+inner join TimeLogs time on time.employee_id = employees.employee_id
+and time.project_id = Projects.project_id
+where 
+group by Projects.name
+having count(Projects.id) == 2
+ 
+ 
+ 
+ 
+ 
+ ///////////////////////////////////////////////////////////////////
+ 
+ 
+ 
+ 
+ 
+
+List<Transation> trans = new ArrayList<>();
+
+id
+amount
+status = "Pending", "Success" "Fail";
+
+
+
+trans.stream().map(trans -> tra).collect(Collectors.grouppingBy(tra -> tra.getStatus, Collectors.))
+
+
+/payment/id
+
+
+
+/////////////////////////////////////////////
+
+
+
+
+
+
+class SingleTonClass {
+      
+	  private static SingleTonClass singleTonClass;
+	  
+	  private SingleTonClass(){
+	  
+	  }
+	  
+	  public Sychrocized SingleTonClass static getInstance(){
+	       if(singleTonClass == null){
+	         singleTonClass = new SingleTonClass();
+			}
+			return singleTonClass;
+	  }
+
+}
+
+final class Employee{ 
+  private final Integer id;
+  private final String name;
+  
+  Employee(Integer id,String name){
+      this.id = id;
+      this.name = name;
+  }
+  
+  public Integer getId(){
+   return this.is;
+  }
+  
+  public String getName(){
+   return this.name;
+  
+  }
+}
+
+
+
+
+
+///////////////////////////////////////////////////////
+
+
+
+
+
+
+
+
+@Repository
+public interface EmoployeeRepository impliment JpaRepository<Long,Employee>(){
+
+}
+
+Select email ,count(*) as count from Employee
+group by email
+having count(*) > 1
+
+
+
+
+
+/////////////////////////////////////////////////////
+
+
+
+
+
+
+      String name = "Narendra Singh";
+	  
+	 package interview;
+
+import java.util.Arrays;
+import java.util.Comparator;
+import java.util.List;
+import java.util.Map;
+import java.util.Optional;
+import java.util.function.Function;
+import java.util.stream.Collectors;
+
+public class StreamInJava {
+
+    public static void main(String[] args) {
+
+        List<String> strs = Arrays.asList("Subham", "Rakes", "cHATBOT", "sRS", "Social Regitry", "sRS");
+
+        // Print all elements
+        System.out.println("All elements:");
+        strs.stream().forEach(System.out::print);
+
+        // Convert all to LowerCase
+        List<String> lowerCase = strs.stream().map(String::toLowerCase).collect(Collectors.toList());
+        System.out.println("Lowercase: " + lowerCase);
+
+        // Count no of elements
+        long count = strs.stream().count();
+        System.out.println("Count: " + count);
+
+        // Remove Duplicates
+        List<String> distinct = strs.stream().distinct().collect(Collectors.toList());
+        System.out.println("Distinct: " + distinct);
+
+        // Filter String Starting with S
+        List<String> startsWithS = strs.stream().filter(x -> x.startsWith("S")).collect(Collectors.toList());
+        System.out.println("Starts with S: " + startsWithS);
+
+        // Count Duplicates
+        Map<String, Long> duplicates = strs.stream()
+                .collect(Collectors.groupingBy(Function.identity(), Collectors.counting()));
+        System.out.println("Duplicates count: " + duplicates);
+
+        // Sort alphabetically
+        List<String> sorted = strs.stream().sorted(String.CASE_INSENSITIVE_ORDER).collect(Collectors.toList());
+        System.out.println("Sorted: " + sorted);
+
+        // find Longest String
+        Optional<String> longest = strs.stream().max(Comparator.comparingInt(String::length));
+        System.out.println("Longest String: " + longest.orElse("N/A"));
+
+        // Join string
+        String joined = strs.stream().collect(Collectors.joining(","));
+        System.out.println("Joined String: " + joined);
+
+        // Group by length
+        Map<Integer, List<String>> groupByLength = strs.stream().collect(Collectors.groupingBy(String::length));
+        System.out.println("Group by length: " + groupByLength);
+
+        // Find first string length > 6
+        Optional<String> firstLong = strs.stream().filter(x -> x.length() > 6).findFirst();
+        System.out.println("First length > 6: " + firstLong.orElse("N/A"));
+
+        // Capitalize first letter
+        List<String> capitalized = strs.stream()
+                .map(x -> x.substring(0, 1).toUpperCase() + x.substring(1).toLowerCase())
+                .collect(Collectors.toList());
+        System.out.println("Capitalized: " + capitalized);
+
+        // Numbers List
+        List<Integer> numbers = Arrays.asList(1,2,3,4,5,6,7,8,9,10,11,12);
+
+        // Filter even numbers
+        List<Integer> evens = numbers.stream().filter(x -> x % 2 == 0).collect(Collectors.toList());
+        System.out.println("Even Numbers: " + evens);
+
+        // Filter odd numbers
+        List<Integer> odds = numbers.stream().filter(x -> x % 2 != 0).collect(Collectors.toList());
+        System.out.println("Odd Numbers: " + odds);
+
+        // Find sum of all numbers
+        long sum = numbers.stream().mapToInt(Integer::intValue).sum();
+        System.out.println("Sum: " + sum);
+
+        // Find Max Number
+        Optional<Integer> max = numbers.stream().max(Integer::compareTo);
+        System.out.println("Max: " + max.orElse(-1));
+
+        // Find Min Number
+        Optional<Integer> min = numbers.stream().min(Integer::compareTo);
+        System.out.println("Min: " + min.orElse(-1));
+
+        // Find Second Highest
+        int secondHighest = numbers.stream().sorted(Comparator.reverseOrder()).distinct().skip(1).findFirst().orElse(0);
+        System.out.println("Second Highest: " + secondHighest);
+
+        // Find Second Smallest
+        int secondSmallest = numbers.stream().sorted().distinct().skip(1).findFirst().orElse(0);
+        System.out.println("Second Smallest: " + secondSmallest);
+
+        // Count numbers greater than 5
+        long greaterThan5Count = numbers.stream().filter(x -> x > 5).count();
+        System.out.println("Count > 5: " + greaterThan5Count);
+
+        // Sum of numbers greater than 5
+        long sumGreaterThan5 = numbers.stream().filter(x -> x > 5).mapToInt(Integer::intValue).sum();
+        System.out.println("Sum > 5: " + sumGreaterThan5);
+
+        // Multiply all numbers
+        long product = numbers.stream().reduce(1, (x, y) -> x * y);
+        System.out.println("Product: " + product);
+
+        // Check if any number is divisible by 7
+        boolean divisibleBy7 = numbers.stream().anyMatch(x -> x % 7 == 0);
+        System.out.println("Any divisible by 7: " + divisibleBy7);
+
+        // Partition into even and odd
+        Map<Boolean, List<Integer>> partition = numbers.stream().collect(Collectors.partitioningBy(n -> n % 2 == 0));
+        System.out.println("Partition Even/Odd: " + partition);
+
+        // Employees
+        List<Map<String,Object>> emps = List.of(
+                Map.of("id","1","name","Subham","desg","Developer","sal",10000),
+                Map.of("id","2","name","Riju","desg","HR","sal",20000),
+                Map.of("id","3","name","Sankha","desg","Tester","sal",25000),
+                Map.of("id","4","name","xyz","desg","DBA","sal",20000),
+                Map.of("id","5","name","abc","desg","Developer","sal",40000)
+        );
+
+        // Print all names
+        System.out.println("Employee Names:");
+        emps.stream().map(emp -> emp.get("name")).forEach(System.out::println);
+
+        // Filter all Developers
+        List<Map<String, Object>> devs = emps.stream().filter(x -> "Developer".equals(x.get("desg"))).collect(Collectors.toList());
+        System.out.println("Developers: " + devs);
+
+        // Extract salaries
+        List<Object> salaries = emps.stream().map(x -> x.get("sal")).collect(Collectors.toList());
+        System.out.println("Salaries: " + salaries);
+
+        // Total salary
+        long totalSalary = emps.stream().mapToInt(x -> (Integer)x.get("sal")).sum();
+        System.out.println("Total Salary: " + totalSalary);
+
+        // Group employees by designation
+        Map<String, List<Map<String, Object>>> groupByDesg = emps.stream().collect(Collectors.groupingBy(x -> (String)x.get("desg")));
+        System.out.println("Group by designation: " + groupByDesg);
+
+        // Max salary employee
+        Optional<Map<String, Object>> maxSalaryEmp = emps.stream().max(Comparator.comparingInt(x -> (Integer)x.get("sal")));
+        System.out.println("Max Salary Emp: " + maxSalaryEmp.orElse(Map.of()));
+
+        // Sort employees by salary
+        List<Map<String, Object>> sortedBySalary = emps.stream().sorted(Comparator.comparingInt(x -> (Integer)x.get("sal"))).collect(Collectors.toList());
+        System.out.println("Sorted by Salary: " + sortedBySalary);
+
+        // Average salary
+        double avgSalary = emps.stream().mapToInt(x -> (Integer)x.get("sal")).average().orElse(0);
+        System.out.println("Average Salary: " + avgSalary);
+
+        // Employees with salary > 20000
+        List<Object> highEarners = emps.stream().filter(x -> (Integer)x.get("sal") > 20000).map(x -> x.get("name")).collect(Collectors.toList());
+        System.out.println("Salary > 20000: " + highEarners);
+
+        // Check if any employee is HR
+        boolean anyHR = emps.stream().anyMatch(x -> "HR".equals(x.get("desg")));
+        System.out.println("Any HR: " + anyHR);
+    }
+}
+
+	  
+	  Employee id name salary manager_id
+	  
+	  select * from Employee emp
+	  inner join Employee manager on manager.id = emp.manager_id
+	  where emp.salary > manager.salary;
+	  
+	  
+	  
+	  
+	  
+	  /////////////////////////////////////////////////////////////////////
+	  
+	  
+	  
+	  
+	  
+	  
+	  
+	  
+
+select * from table_a
+right join table_b on table_b.table_a_id = table_a.id
+
+
+Employee -> empid, empname, orgId
+Organization -> orgId,orgname
+Department -> deptid,deptname,orgid,
+Salary -> empid, salary,deptid
+ 
+empName, orgname, deptname, salary
+
+select emp.empName, org.orgname, dep.deptname, sal.salary from Employee emp
+inner join Organization org on org.orgId = emp.orgId
+inner join Department dep on dep.orgId= org.orgId
+inner join Salary sal on sal.empid= emp.empid
+
+
+
+
+
+///////////////////////////////////////////////////////////////////////////////////////////
+
+
+
+
+import java.io.*;
+import java.math.*;
+import java.security.*;
+import java.text.*;
+import java.util.*;
+import java.util.concurrent.*;
+import java.util.function.*;
+import java.util.regex.*;
+import java.util.stream.*;
+import static java.util.stream.Collectors.joining;
+import static java.util.stream.Collectors.toList;
+
+
+
+class Result {
+
+    /*
+     * Complete the 'getRemovableIndices' function below.
+     *
+     * The function is expected to return an INTEGER_ARRAY.
+     * The function accepts following parameters:
+     *  1. STRING str1
+     *  2. STRING str2
+     */
+      public static List<Integer> getRemovableIndices(String str1, String str2) {
+        if (str1.length() != str2.length() + 1) {
+            return new ArrayList<>(List.of(-1));
+        }
+
+        List<Integer> indices = new ArrayList<>();
+        int n1 = str1.length();
+        int n2 = str2.length();
+
+        // Step 1: Find the length of the longest common prefix
+        int prefixLength = 0;
+        while (prefixLength < n2 && str1.charAt(prefixLength) == str2.charAt(prefixLength)) {
+            prefixLength++;
+        }
+
+        // Step 2: Find the length of the longest common suffix
+        int suffixLength = 0;
+        while (suffixLength < n2 && str1.charAt(n1 - 1 - suffixLength) == str2.charAt(n2 - 1 - suffixLength)) {
+            suffixLength++;
+        }
+
+        // Step 3: Identify the valid removable indices
+        for (int i = n2 - suffixLength; i <= prefixLength; i++) {
+            indices.add(i);
+        }
+
+        return indices.isEmpty() ? new ArrayList<>(List.of(-1)) : indices;
+    }
+}
+
+public class Solution {
+    public static void main(String[] args) throws IOException {
+        BufferedReader bufferedReader = new BufferedReader(new InputStreamReader(System.in));
+
+        String str1 = bufferedReader.readLine();
+
+        String str2 = bufferedReader.readLine();
+
+        List<Integer> result = Result.getRemovableIndices(str1, str2);
+
+        System.out.println(
+            result.stream()
+                .map(Object::toString)
+                .collect(joining("\n"))
+        );
+
+        bufferedReader.close();
+    }
+}
+
+
+
+
+////////////////////////////////////////////////////////////////////
+
+
+
+
+
+
+
+import java.io.*;
+import java.util.*;
+import java.text.*;
+import java.math.*;
+import java.util.regex.*;
+import java.lang.*; 
+public class Main {
+public static void main(String[] args) {
+
+    int[] arr=  {1,3,4,6,8,9,11,23,7,3,6}; 
+// 1) sum of all odd numbers -  using stream
+
+    //IntStream.range(0,arr.length).map(i -> i).filter(arr[i] % 2 != 0);
+
+   int sum = Arrays.stream(arr).filter(i -> i % 2 != 0).sum();
+
+   System.out.println(sum);
+
+
+
+}
+}
+
+
+final class Employee { 
+    private  Integer id ;
+    private  String name;
+    private Integer age;
+
+    Employee(Integer id, String name, List<Integer> phonenumber){
+        this.id = id;
+        this.name = name;
+        this.phonenumber = phonenumber;
+    }
+
+    public Integer getId(){
+        return this.id;
+    }
+
+    public String getName(){
+        return this.name;
+    }
+
+    public List<Integer> getPhonenumber(){
+        return this.phonenumber;
+    } 
+
+} 
+
+HashMap<Employee,String> map = new HashMap<>();
+
+Employee emp = new Employee(101,"Narendra",18);
+
+
+id name salary managerid 
+101 vishal 10000 102
+102 Narendra 8000 101
+
+select name from employee 
+where salary > (select salary from employee where id = employee.managerid);
+
+select name from employee
+inner join employee emp1 on emp1.id = employee.managerid
+where employee.salary > emp1.salary
+
+
+
+
+
+
+map.put(emp,"Dev");
+map.put(emp,"Manager");
+map.put(emp,"It");
+
+
+class SigaltonClass {
+
+    private static SigaltonClass sigaltonClass;
+
+    private SigaltonClass(){
+
+    }
+
+    public syncronized static SigaltonClass getSigaltonClass(){
+        if(sigaltonClass == null){
+           sigaltonClass = new sigaltonClass();
+        }
+        return sigaltonClass;
+    }
+
+    proctect clone(){
+
+    }
+}
+
+
+
+
+
+
+emp.getPhonenumber().add(456787654);
+
+
+class String InvalidationAgeException extend RuntimeException {
+    
+    InvalidationAgeException(){
+        super();
+    }
+
+    String InvalidationAgeException(Integer age){
+         return  "Age is not valid" + age;
+    }
+}
+
+ExcuterService excuter = Executers.newFixedThreadPool(5);
+
+
+class ThreadClass {
+ 
+Thread t1 = new Thread();
+    void run(){
+         t1.start();
+    }
+    t1.end;
+}
