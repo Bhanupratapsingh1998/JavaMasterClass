@@ -1,4 +1,4 @@
-package com.dsa2024.leetcode;
+package com.dsa2024.leetcode.classic_problems_puzzles;
 
 public class BuyStock {
     public static int maxProfit(int[] prices) {

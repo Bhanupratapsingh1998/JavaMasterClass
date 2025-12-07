@@ -1,4 +1,4 @@
-package com.dsa2024.leetcode;
+package com.dsa2024.leetcode.classic_problems_puzzles;
 
 public class FindMissingNum {
     static int findMissingNumber(int[] arr, int N) {
