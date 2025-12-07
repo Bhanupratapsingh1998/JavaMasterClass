@@ -1,7 +1,6 @@
-package com.dsa2024.leetcode;
+package com.dsa2024.leetcode.search_binary_search;
 
-public class MountainArray {
-
+public class PeakIndexInMountainArr {
     // 1. Linear Scan Approach
     // Time Complexity: O(n)
     // Space Complexity: O(1)
@@ -18,25 +17,25 @@ public class MountainArray {
     // Time Complexity: O(log n)
     // Space Complexity: O(1)
     // Both start and end are equal at a time. Hence we can return one of them
-    private static int peakIndexInMountainArray(int[] nums) {
+    public static int peakIndexInMountainArray(int[] arr) {
         int start = 0;
-        int end = nums.length - 1;
+        int end = arr.length - 1;
         while (start < end) {
             int mid = start + (end - start) / 2;
 
-            if (nums[mid] > nums[mid + 1]) {
+            if (arr[mid] > arr[mid + 1]) {
                 end = mid;
             } else {
                 start = mid + 1;
             }
+
         }
         return start;
     }
 
     public static void main(String[] args) {
-        int[] nums = { 1, 2, 3, 4, 3, 2 };
-        // System.out.println(findPeakIndex(nums));
-        System.out.println(peakIndexInMountainArray(nums));
-
+        int[] arr = { 1, 3, 5, 4, 2 };
+        // System.out.println(findPeakIndex(arr));
+        System.out.println(peakIndexInMountainArray(arr)); // prints 2
     }
 }

@@ -33,9 +33,40 @@ public class ValidAnagram {
         return map.isEmpty();
     }
 
+    public static boolean isAnagram(String s1, String s2) {
+        s1 = s1.replace("\\s", "").toLowerCase();
+        s2 = s2.replace("\\s", "").toLowerCase();
+
+        // Length check
+        if (s1.length() != s2.length())
+            return false;
+
+        // Create frequency array for 26 letters
+        int[] freq = new int[26];
+
+        // Count characters of first string
+        for (int i = 0; i < s1.length(); i++) {
+            freq[s1.charAt(i) - 'a']++;
+        }
+
+        // Decrease count for second string
+        for (int i = 0; i < s2.length(); i++) {
+            freq[s2.charAt(i) - 'a']--;
+        }
+
+        // If any value != 0 → Not anagram
+        for (int i = 0; i < 26; i++) {
+            if (freq[i] != 0)
+                return false;
+        }
+
+        return true;
+    }
+
     public static void main(String[] args) {
         String str = "deer";
         String target = "reed";
         System.out.println(isValidAnagram(str, target));
+        System.out.println(isAnagram(str, target));
     }
 }

@@ -51,16 +51,14 @@ Practice variations of binary search – a key DSA pattern.
 14. First and Last Position in Sorted Array
 15. Position of an Element in Infinite Sorted Array
 16. Search in Rotated Sorted Array
-17. Search in Rotated Sorted Array II
-
 ---
 
 ### ⛰️ Level 4: Bit More Challenging Search & Peak Logic
 
 Involves modified binary searches and peak analysis.
 
-18. Peak Index in Mountain Array
-19. Find in Mountain Array
+17. Peak Index in Mountain Array
+18. Find in Mountain Array
 
 ---
 
@@ -68,10 +66,10 @@ Involves modified binary searches and peak analysis.
 
 These are commonly asked and involve logic + array/string manipulations.
 
-20. Two Sum
-21. Three Sum
-22. Find the missing number \[1 to N]
-23. Find the Repeating and Missing Number from an Array
-24. Majority Element (\[n/3] times)
-25. Best Time to Buy or Sell Stocks
+19. Two Sum
+20. Three Sum
+21. Find the missing number \[1 to N]
+22. Find the Repeating and Missing Number from an Array
+23. Majority Element (\[n/3] times)
+24. Best Time to Buy or Sell Stocks
 

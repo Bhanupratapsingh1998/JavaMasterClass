@@ -1,6 +1,6 @@
-package com.dsa2024.leetcode;
+package com.dsa2024.leetcode.search_binary_search;
 
-public class RotatedBS {
+public class SearchRotatedSortedArray {
     public static void main(String[] args) {
         // int[] arr = { 1, 2, 3, 4, 5,5, 6 };
         int[] arr = { 6, 7, 1, 2, 3, 4, 5 };
