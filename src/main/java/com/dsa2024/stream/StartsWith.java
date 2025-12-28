@@ -48,7 +48,7 @@ class Student {
 
 }
 
-public class startsWith {
+public class StartsWith {
     public static void main(String[] args) {
 
         Student st = new Student();

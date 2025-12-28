@@ -4,7 +4,7 @@ import java.util.Arrays;
 import java.util.List;
 import java.util.Optional;
 
-public class findFirstAndAny {
+public class FindFirstAndAny {
 
         public static void main(String[] args) {
                 List<Integer> numbers = Arrays.asList(3, 7, 10, 4, 9, 2, 5, 8);

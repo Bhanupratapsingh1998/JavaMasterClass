@@ -4,7 +4,7 @@ import java.util.List;
 import java.util.stream.Collectors;
 import java.util.stream.IntStream;
 
-public class boxedStream {
+public class BoxedStream {
     public static void main(String[] args) {
         // Calculate the sum of squares of even numbers in a range, then collect the
         // results into a list

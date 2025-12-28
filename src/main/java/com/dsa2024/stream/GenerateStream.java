@@ -4,7 +4,7 @@ import java.util.function.Consumer;
 import java.util.function.Supplier;
 import java.util.stream.Stream;
 
-public class generateStream {
+public class GenerateStream {
     private static Stream<String> stream;
 
     public static void main(String[] args) {
