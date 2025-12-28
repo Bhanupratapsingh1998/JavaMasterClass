@@ -4,6 +4,8 @@ https://www.edureka.co/blog/interview-questions/oops-interview-questions/
 For collection Frame Work
 https://www.edureka.co/blog/interview-questions/java-collections-interview-questions/
 
+Leet 150 QA plan
+https://leetcode.com/problem-list/plakya4j/
 
 1. Priority Queue.
 2. using 2 stack then make Queue
