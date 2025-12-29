@@ -1,5 +1,7 @@
 1. Given a sentence, find the word that has the highest length 
 LongestWordFinder
 
+2 Remove duplicates from the string and return in the same order|| Most Asked
+RemoveDuplicateCharacters
 
 
