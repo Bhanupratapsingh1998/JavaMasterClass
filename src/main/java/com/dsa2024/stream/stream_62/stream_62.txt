@@ -4,4 +4,6 @@ LongestWordFinder
 2 Remove duplicates from the string and return in the same order|| Most Asked
 RemoveDuplicateCharacters
 
+3. Given a sentence, find the word that has the 2nth highest length 
+NthLongestWordFinder
 
