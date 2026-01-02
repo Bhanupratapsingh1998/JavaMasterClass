@@ -1,0 +1,5 @@
+findFirst()
+findAny()
+boxed()
+Function.identity()
+Collectors.counting()

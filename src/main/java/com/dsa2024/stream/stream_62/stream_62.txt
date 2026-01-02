@@ -7,3 +7,8 @@ RemoveDuplicateCharacters
 3. Given a sentence, find the word that has the 2nth highest length 
 NthLongestWordFinder
 
+4. Given a sentence, find the occurrence of each word
+WordOccurrenceCounter
+
+5. Given a sentence, find the words with a specified number of vowels 2 for each
+VowelWordFinder
