@@ -3,3 +3,10 @@ findAny()
 boxed()
 Function.identity()
 Collectors.counting()
+| Concept            | Used                  |
+| ------------------ | --------------------- |
+| IntStream → Stream | `.boxed()`            |
+| Two-way split      | `partitioningBy()`    |
+| Map flattening     | `entrySet().stream()` |
+| Collectors         | `toList()`            |
+
