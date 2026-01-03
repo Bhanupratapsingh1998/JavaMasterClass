@@ -1,0 +1,24 @@
+Write an application to find unique characters in a given string and print the total count of unique characters.
+Input:  "AAAABBBBBVVVVVDDDDDSAAAA"
+Output: A B V D S
+Count: 5
+
+UniqueCharactersFinder
+
+=============================================================================
+
+✅ Rules for Creating an Immutable Class (Interview MUST-KNOW)
+
+Class must be final
+
+All fields must be private final
+
+No setters
+
+Initialize all fields via constructor
+
+Defensive copy of mutable objects
+
+Return unmodifiable copies in getters
+
+===============================================================================

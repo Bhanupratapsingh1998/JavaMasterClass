@@ -12,3 +12,8 @@ WordOccurrenceCounter
 
 5. Given a sentence, find the words with a specified number of vowels 2 for each
 VowelWordFinder
+
+6. Given a list of Integers, divide into two lists one having an even numbers and the having odd numbers
+I/P : int[] arr = {1,2,3,4,5,6,7,8}
+O/P : [[1,3,5,7 ],[2,4,6,8]]
+
