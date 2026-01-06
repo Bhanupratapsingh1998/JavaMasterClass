@@ -21,4 +21,13 @@ Defensive copy of mutable objects
 
 Return unmodifiable copies in getters
 
+ImmutableClass
 ===============================================================================
+
+Write a Java 8 stream pipeline to group employees by department and find the highest salary in each department.
+HighestSalaryByDepartment
+
+Given an integer array and a target element, write a program to search for the index of the element.
+If the element is found, return its index.
+If the element is not found, return -1.
+LinearSearchExample

@@ -10,3 +10,5 @@ Collectors.counting()
 | Map flattening     | `entrySet().stream()` |
 | Collectors         | `toList()`            |
 
+range
+collectingAndThen
