@@ -50,3 +50,30 @@ FROM employee emp
 INNER JOIN employee manager
     ON emp.managerid = manager.id
 WHERE emp.salary > manager.salary;
+
+Q8. How to reverse a string ?
+I/P : Narendra
+O/P : ardneraN
+ReverseStringExample
+
+Q9. How to Create a thread using the Thread class?
+ThreadExample
+
+Q10. Write a SQL stored procedure that takes startDate and endDate as input and returns how many times Wednesday occurs between those dates.
+CREATE TABLE calendar_days (
+    id INT AUTO_INCREMENT PRIMARY KEY,
+    day_date DATE
+);
+
+CREATE PROCEDURE getBetweenDays(
+    IN startDate DATE,
+    IN endDate DATE
+)
+BEGIN
+    SELECT COUNT(*) AS Wednesday_Count
+    FROM calendar_days
+    WHERE day_date BETWEEN startDate AND endDate
+      AND DAYNAME(day_date) = 'Wednesday';
+END
+
+CALL getBetweenDays('2025-01-01', '2025-01-31');
