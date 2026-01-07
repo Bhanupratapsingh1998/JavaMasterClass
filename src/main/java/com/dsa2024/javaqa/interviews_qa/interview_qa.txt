@@ -1,4 +1,4 @@
-Write an application to find unique characters in a given string and print the total count of unique characters.
+Q1. Write an application to find unique characters in a given string and print the total count of unique characters.
 Input:  "AAAABBBBBVVVVVDDDDDSAAAA"
 Output: A B V D S
 Count: 5
@@ -24,10 +24,29 @@ Return unmodifiable copies in getters
 ImmutableClass
 ===============================================================================
 
-Write a Java 8 stream pipeline to group employees by department and find the highest salary in each department.
+Q2. Write a Java 8 stream pipeline to group employees by department and find the highest salary in each department.
 HighestSalaryByDepartment
 
-Given an integer array and a target element, write a program to search for the index of the element.
+Q3. Given an integer array and a target element, write a program to search for the index of the element.
 If the element is found, return its index.
 If the element is not found, return -1.
 LinearSearchExample
+
+Q4. Given a word, find the occurrence of each character
+CharacterOccurrenceCounter
+
+Q5. Given a sentence, find the occurrence of each word
+WordOccurrenceCounter
+
+Q6. Write an SQL query to fetch the 3rd highest salary from the employee table.
+SELECT DISTINCT salary
+FROM employee
+ORDER BY salary DESC
+LIMIT 1 OFFSET 2;
+
+Q7. Write an SQL query to fetch employees whose salary is greater than their manager’s salary.
+SELECT *
+FROM employee emp
+INNER JOIN employee manager
+    ON emp.managerid = manager.id
+WHERE emp.salary > manager.salary;
