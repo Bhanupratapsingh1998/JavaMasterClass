@@ -77,3 +77,45 @@ BEGIN
 END
 
 CALL getBetweenDays('2025-01-01', '2025-01-31');
+
+Q11. Write a SQL query to find the top 3 employees (by total hours logged) 
+who have worked on at least 2 different projects in the last 90 days.
+Also include the number of distinct projects and total hours logged for each.
+You are given three tables: Employees, Projects, and TimeLogs.
+
+CREATE TABLE Employees (
+    employee_id INT PRIMARY KEY,
+    name VARCHAR(100),
+    department VARCHAR(50)
+);
+
+CREATE TABLE Projects (
+    project_id INT PRIMARY KEY,
+    project_name VARCHAR(100),
+    start_date DATE,
+    end_date DATE
+);
+
+CREATE TABLE TimeLogs (
+    log_id INT PRIMARY KEY,
+    employee_id INT,
+    project_id INT,
+    log_date DATE,
+    hours_logged INT,
+    FOREIGN KEY (employee_id) REFERENCES Employees(employee_id),
+    FOREIGN KEY (project_id) REFERENCES Projects(project_id)
+);
+
+SELECT
+    e.employee_id,
+    e.name,
+    COUNT(DISTINCT t.project_id) AS distinct_projects,
+    SUM(t.hours_logged) AS total_hours
+FROM Employees e
+JOIN TimeLogs t
+    ON e.employee_id = t.employee_id
+WHERE t.log_date >= DATE_SUB(CURDATE(), INTERVAL 90 DAY)
+GROUP BY e.employee_id, e.name
+HAVING COUNT(DISTINCT t.project_id) >= 2
+ORDER BY total_hours DESC
+LIMIT 3;
