@@ -119,3 +119,24 @@ GROUP BY e.employee_id, e.name
 HAVING COUNT(DISTINCT t.project_id) >= 2
 ORDER BY total_hours DESC
 LIMIT 3;
+
+Q12. Given a list of Transaction objects having id, amount, and status (Pending, Success, Fail),
+group the transactions by status and count how many transactions are there in each status.
+TransactionDemo
+
+Q13. Write an SQL query to find duplicate email addresses in the Employee table and display the email along with the number of occurrences, considering only those emails that appear more than once.
+SELECT email, COUNT(*) AS count
+FROM Employee
+GROUP BY email
+HAVING COUNT(*) > 1;
+
+Q14. You are given four tables: Employee, Organization, Department, and Salary.
+Write an SQL query to fetch employee name, organization name, department name, and salary by joining all required tables.
+SELECT emp.empName,
+       org.orgname,
+       dep.deptname,
+       sal.salary
+FROM Employee emp
+INNER JOIN Organization org ON org.orgId = emp.orgId
+INNER JOIN Department dep ON dep.orgId = org.orgId
+INNER JOIN Salary sal ON sal.empid = emp.empid;
