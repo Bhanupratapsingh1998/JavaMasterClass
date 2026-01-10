@@ -140,3 +140,15 @@ FROM Employee emp
 INNER JOIN Organization org ON org.orgId = emp.orgId
 INNER JOIN Department dep ON dep.orgId = org.orgId
 INNER JOIN Salary sal ON sal.empid = emp.empid;
+
+Q15. We compare the longest matching prefix and suffix to identify all positions where removing one character aligns the strings.
+SingleCharRemoval
+
+Q16. Write a Java program to create a custom runtime exception InvalidAgeException and throw it when the age is less than 18.
+ValidateAge
+
+Q17. Write a Java program demonstrating the use of ExecutorService with a fixed thread pool.
+FixedThreadPoolExample
+
+Q18. Write a Java program to create and start a thread using the Runnable interface.
+CustomThreadExample
