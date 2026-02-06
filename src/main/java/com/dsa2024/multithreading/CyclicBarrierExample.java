@@ -3,32 +3,25 @@ package com.dsa2024.multithreading;
 import java.util.concurrent.CyclicBarrier;
 
 public class CyclicBarrierExample {
+
     public static void main(String[] args) {
-        int numberOfThreads = 3;
-        CyclicBarrier barrier = new CyclicBarrier(numberOfThreads,
-                () -> System.out.println("All parties have arrived, proceeding..."));
+        CyclicBarrier barrier = new CyclicBarrier(3,
+            () -> System.out.println("All players ready. Game starts!")
+        );
 
-        for (int i = 0; i < numberOfThreads; i++) {
-            Thread worker = new Thread(new Task(barrier));
-            worker.start();
-        }
-    }
-}
+        Runnable player = () -> {
+            try {
+                System.out.println(Thread.currentThread().getName() + " ready");
+                Thread.sleep(1000);
+                barrier.await(); // wait for others
+                System.out.println(Thread.currentThread().getName() + " playing");
+            } catch (Exception e) {
+                e.printStackTrace();
+            }
+        };
 
-class Task implements Runnable {
-    private CyclicBarrier barrier;
-
-    public Task(CyclicBarrier barrier) {
-        this.barrier = barrier;
-    }
-
-    public void run() {
-        try {
-            System.out.println(Thread.currentThread().getName() + " is waiting at the barrier...");
-            barrier.await();
-            System.out.println(Thread.currentThread().getName() + " has crossed the barrier!");
-        } catch (Exception e) {
-            e.printStackTrace();
-        }
+        new Thread(player, "Player 1").start();
+        new Thread(player, "Player 2").start();
+        new Thread(player, "Player 3").start();
     }
 }
