@@ -18,6 +18,14 @@ public class ProductArray {
             result[i] = result[i] * suffixProduct;
             suffixProduct = suffixProduct * numbers[i];
         }
+        /*
+            int[] suffix = new int[n];
+            suffix[n - 1] = 1; // no elements after last index
+
+            for (int i = n - 2; i >= 0; i--) {
+                suffix[i] = suffix[i + 1] * numbers[i + 1];
+            }
+        */
 
         return result;
     }
