@@ -6,7 +6,6 @@ public class SearchRotatedSortedArray {
         int[] arr = { 6, 7, 1, 2, 3, 4, 5 };
         int target = 3;
         System.out.println(search(arr, target));
-        // System.out.println(findPivotWithDuplicates(arr));
     }
 
     static int search(int[] nums, int target) {
@@ -19,7 +18,7 @@ public class SearchRotatedSortedArray {
         if (nums[pivot] == target) {
             return pivot;
         }
-        if (target >= nums[0]) {
+        if (target >= nums[0] && target <= nums[pivot]) {
             return binarySearch(nums, target, 0, pivot - 1);
         }
         return binarySearch(nums, target, pivot + 1, nums.length - 1);
